@@ -1,5 +1,5 @@
 var helpers = require('../helpers');
-var Joi = require('joi');
+var Joi = require('@hapi/joi');
 var assert = require('assert');
 
 describe('array of primitive types', function() {
@@ -8,8 +8,7 @@ describe('array of primitive types', function() {
     count: 31,
     schema: Joi.object().keys({
       name: Joi.string().required(),
-      friends: Joi.array().includes(Joi.string()).
-                           excludes(Joi.object()).required()
+      friends: Joi.array().items(Joi.string()).required()
     }).length(2)
   };
 
@@ -63,7 +62,7 @@ describe('array of documents', function() {
     count: 99,
     schema: Joi.object().keys({
       name: Joi.string().required(),
-      friends: Joi.array().includes(Joi.object().keys({
+      friends: Joi.array().items(Joi.object().keys({
         name: Joi.string().required(),
         phone: Joi.string().regex(helpers.regex.phone).required()
       }).length(2)).required()
@@ -120,7 +119,7 @@ describe('array of embedded docs', function() {
     count: 19,
     schema: Joi.object().keys({
       name: Joi.string().required(),
-      friends: Joi.array().includes(Joi.object().keys({
+      friends: Joi.array().items(Joi.object().keys({
         name: Joi.string().required(),
         payment_method: Joi.object().keys({
           type: Joi.string().required(),
@@ -181,9 +180,9 @@ describe('embedded arrays', function() {
     count: 11,
     schema: Joi.object().keys({
       name: Joi.string().required(),
-      friends: Joi.array().includes(Joi.object().keys({
+      friends: Joi.array().items(Joi.object().keys({
         name: Joi.string().required(),
-        payment_method: Joi.array().includes(Joi.object().keys({
+        payment_method: Joi.array().items(Joi.object().keys({
           type: Joi.string().required(),
           card: Joi.number().integer().required(),
           expiration: Joi.string().regex(helpers.regex.exp).required()

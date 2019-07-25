@@ -1,5 +1,5 @@
 var helpers = require('../helpers');
-var Joi = require('joi');
+var Joi = require('@hapi/joi');
 var assert = require('assert');
 
 describe('basic embedded schema', function() {

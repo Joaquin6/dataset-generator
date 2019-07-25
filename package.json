@@ -10,24 +10,20 @@
     "mongodb-dataset-generator": "bin/mongodb-dataset-generator.js"
   },
   "dependencies": {
-    "bson": "^0.2.19",
-    "chance": "^1.0.10",
-    "debug": "^2.1.1",
-    "event-stream": "^3.2.2",
-    "faker": "^1.0.0",
-    "joi": "^4.6.2",
-    "mongodb-extended-json": "^1.1.2",
+    "bson": "^4.0.2",
+    "chance": "^1.0.18",
+    "debug": "3.1.0",
+    "event-stream": "^4.0.1",
+    "faker": "^4.1.0",
+    "mongodb-extended-json": "^1.10.1",
     "mongodb-uri": "^0.9.7",
-    "underscore": "^1.8.2",
-    "yargs": "^3.4.4"
+    "underscore": "^1.9.1",
+    "yargs": "^13.3.0"
   },
   "devDependencies": {
-    "dox": "^0.4.6",
-    "gulp": "^3.8.6",
-    "mocha": "^1.20.1",
-    "gulp": "^3.8.11",
-    "mocha": "^2.1.0",
-    "mongodb-importer": "^0.0.0"
+    "@hapi/joi": "^15.1.0",
+    "gulp": "^4.0.2",
+    "mocha": "^6.2.0"
   },
   "keywords": [
     "mongodb",
@@ -35,9 +31,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/mongodb-js/dataset-generator.git"
+    "url": "http://github.com/Joaquin6/dataset-generator.git"
   },
-  "author": "Lucas Hrabovsky <hrabovsky.lucas@gmail.com> (http://imlucas.com)",
+  "author": "Joaquin Briceno <joaquinbriceno1@gmail.com>",
   "license": "MIT",
-  "homepage": "http://github.com/mongodb-js/dataset-generator"
+  "homepage": "http://github.com/Joaquin6/dataset-generator"
 }

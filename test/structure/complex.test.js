@@ -1,5 +1,5 @@
 var helpers = require('../helpers');
-var Joi = require('joi');
+var Joi = require('@hapi/joi');
 var assert = require('assert');
 
 describe('complex schema', function() {
@@ -24,11 +24,9 @@ describe('complex schema', function() {
         }).length(3).required(),
         'violence-rating': Joi.number().integer().max(6).required(),
       }).length(2).required(),
-      friends: Joi.array().includes(Joi.object().keys({
+      friends: Joi.array().items(Joi.object().keys({
         name: Joi.string().required(),
-        phones: Joi.array()
-          .includes(Joi.string().regex(helpers.regex.phone))
-          .excludes(Joi.object()).required()
+        phones: Joi.array().items(Joi.string().regex(helpers.regex.phone)).required()
       }).length(2)).required()
     }).length(4)
   };

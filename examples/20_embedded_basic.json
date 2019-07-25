@@ -1,5 +1,5 @@
 {
-  "user_email": "{{chance.email()}}",
+  "user_email": "test@email.com",
   "job": {
     "company": "{{chance.word()}}",
     "phone": "{{chance.phone()}}",

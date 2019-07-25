@@ -1,5 +1,5 @@
 {
-  "user_email": "{{chance.email()}}",
+  "user_email": "test@email.com",
   "personalities": {
     "favorites": {
       "number": "{{chance.d10()}}",
